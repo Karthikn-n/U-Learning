@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 Widget buildPage(int index){
-  List<Widget> _widget =[
+  List<Widget> widget = const [
     Center(child: Text('Home')),
     Center(child: Text('Search')),
     Center(child: Text('Course')),
@@ -9,5 +9,5 @@ Widget buildPage(int index){
     Center(child: Text('Profile')),
   ];
 
-  return _widget[index];
+  return widget[index];
 }

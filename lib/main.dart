@@ -7,11 +7,11 @@ import 'package:u_learning/common/values/colors.dart';
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
 // import 'package:u_learning/common/values/colors.dart';
 import 'package:u_learning/firebase_options.dart';
-import 'package:u_learning/pages/application/applicaiton_page.dart';
+// import 'package:u_learning/pages/application/applicaiton_page.dart';
 // import 'package:u_learning/pages/welcome/welcome.dart';
 // import 'package:u_learning/pages/application/applicaiton_page.dart';
 // import 'package:u_learning/common/routes/pages.dart';
-import 'package:u_learning/pages/welcome/welcome.dart';
+// import 'package:u_learning/pages/welcome/welcome.dart';
 
 // import 'common/routes/routes.dart';
 
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
                 backgroundColor: Colors.white
               )
             ),
-            onGenerateRoute: AppPages.GenerateRouteSettings,
+            onGenerateRoute: AppPages.generateRouteSettings,
           );
         },
       )

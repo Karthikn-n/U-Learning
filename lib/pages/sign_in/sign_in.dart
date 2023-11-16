@@ -57,7 +57,7 @@ class _SignInPageState extends State<SignInPage> {
                         buildLogInAndSignInButton("Log In", 'login', 
                           (){
                             SignInController(context: context).handleSignIn("email");           
-                            print('Login button');
+                            // print('Login button');
                           }),
                         buildLogInAndSignInButton("Sign up", 'register',
                         (){

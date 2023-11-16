@@ -141,7 +141,7 @@ Widget buildTextField(String hintText, String textType, String iconName,
 }
 
 Widget forgotPassWord(){
-  return Container(
+  return SizedBox(
     // margin: EdgeInsets.only(left: 25.w),
     width: 260.w,
     height: 44.h,

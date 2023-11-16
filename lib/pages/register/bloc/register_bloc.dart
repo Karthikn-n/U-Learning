@@ -3,7 +3,7 @@ import 'package:u_learning/pages/register/bloc/register_events.dart';
 import 'package:u_learning/pages/register/bloc/register_state.dart';
 
 class RegisterBlocs extends Bloc<RegisterEvent, RegisterState>{
-  RegisterBlocs() : super(RegisterState()){
+  RegisterBlocs() : super(const RegisterState()){
     on<UserNameEvent>(_userNameEvent);
     on<EmailEvent>(_emailEvent);
     on<PasswordEvent>(_passwordEvent);

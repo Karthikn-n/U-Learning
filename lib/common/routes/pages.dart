@@ -1,7 +1,7 @@
 // one route one bloc is best practice.
 // unify BlocProvider and routes pages
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+// import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:u_learning/common/routes/names.dart';
 import 'package:u_learning/pages/register/bloc/register_bloc.dart';
@@ -46,7 +46,7 @@ class AppPages{
 
 
   // model that cover entire screen as we click on navigator object
-  static MaterialPageRoute GenerateRouteSettings(RouteSettings settings){
+  static MaterialPageRoute generateRouteSettings(RouteSettings settings){
     if(settings.name !=null){
       // check for route name matching when navigator gets triggered.
       var result = routes().where((element) => element.route == settings.name);

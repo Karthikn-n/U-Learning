@@ -41,6 +41,7 @@ class RegisterController{
         await credentials.user?.sendEmailVerification();
         await credentials.user?.updateDisplayName(userName);
         toastInfo(msg: "An email has been sent to your registerd email. To activate it please check your email box and click the link");
+        // ignore: use_build_context_synchronously
         Navigator.of(context).pop();
       }
 
