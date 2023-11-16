@@ -7,6 +7,7 @@ import 'package:u_learning/common/values/colors.dart';
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
 // import 'package:u_learning/common/values/colors.dart';
 import 'package:u_learning/firebase_options.dart';
+import 'package:u_learning/pages/application/applicaiton_page.dart';
 // import 'package:u_learning/pages/welcome/welcome.dart';
 // import 'package:u_learning/pages/application/applicaiton_page.dart';
 // import 'package:u_learning/common/routes/pages.dart';
@@ -26,27 +27,27 @@ void main() async{
 */
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [...AppPages.allBlocProviders(context)],
+      providers: AppPages.allBlocProviders(context) ,
       child: ScreenUtilInit(
-      builder: (context, child) =>  MaterialApp(
-          debugShowCheckedModeBanner: false,
-          home: const Welcome(),
-          theme: ThemeData(
-            appBarTheme: const AppBarTheme(
-              iconTheme: IconThemeData(
-                color: AppColors.primaryText
-              ),
-              elevation: 0,
-              backgroundColor: Colors.white
-            )
-          ),
-          onGenerateRoute: AppPages.GenerateRouteSettings,
-        ),
+      builder: (context, child) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+              appBarTheme: const AppBarTheme(
+                iconTheme: IconThemeData(
+                  color: AppColors.primaryText
+                ),
+                elevation: 0,
+                backgroundColor: Colors.white
+              )
+            ),
+            onGenerateRoute: AppPages.GenerateRouteSettings,
+          );
+        },
       )
     );
   }

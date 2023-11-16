@@ -18,12 +18,12 @@ class _WelcomeState extends State<Welcome> {
   PageController pageController = PageController(initialPage: 0);
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: Scaffold(
-        body:  BlocBuilder<WelcomeBloc, WelcomeState>(
-          builder: (context, state) {
-            return Container(
+    return  BlocBuilder<WelcomeBloc, WelcomeState>(
+      builder: (context, state) {
+        return Container(
+          color: Colors.white,
+          child: Scaffold(
+            body: Container(
               margin: EdgeInsets.only(top: 34.h),
               width: 375.w,
               child: Stack(
@@ -82,10 +82,10 @@ class _WelcomeState extends State<Welcome> {
                   )
                 ],
               ),
-            );
-          },
-        )
-      ),
+            ),
+          ),
+        );
+      },
     );
   }
   Widget _page(int index, BuildContext context, String buttonName, String title, String subTitle, String imagePath){
